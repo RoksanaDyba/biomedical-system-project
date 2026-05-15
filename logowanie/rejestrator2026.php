@@ -13,10 +13,7 @@ function holyfunc($dejta) {
     return $dejta;
 }
 
-$dbservername = "mysql.agh.edu.pl";
-$dbusername = "roksanad";
-$dbpassword = "inXmULFh3k3ByrMi";
-$dbname = "roksanad";
+include "../config.php";
 
 $dbconn = mysqli_connect(
     $dbservername,

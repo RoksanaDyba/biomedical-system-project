@@ -6,11 +6,13 @@ if (!isset($_SESSION["current_user"])) {
     exit();
 }
 
+include "config.php";
+
 $conn = mysqli_connect(
-    "mysql.agh.edu.pl",
-    "roksanad",
-    "inXmULFh3k3ByrMi",
-    "roksanad"
+    $dbservername,
+    $dbusername,
+    $dbpassword,
+    $dbname
 );
 
 if (!$conn) {

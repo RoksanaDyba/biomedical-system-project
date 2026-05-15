@@ -15,10 +15,7 @@ function chgw($dane) {
     return $dane;
 }
 
-$dbservername = "mysql.agh.edu.pl";
-$dbusername = "roksanad";
-$dbpassword = "inXmULFh3k3ByrMi";
-$dbname = "roksanad";
+include "config.php";;
 
 $conn = mysqli_connect(
     $dbservername,

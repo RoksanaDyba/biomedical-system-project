@@ -16,10 +16,7 @@ session_start();
 
 <?php
 
-$dbservername = "mysql.agh.edu.pl";
-$dbusername = "roksanad";
-$dbpassword = "inXmULFh3k3ByrMi";
-$dbname = "roksanad";
+include "../config.php";
 
 $dbconn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
 
