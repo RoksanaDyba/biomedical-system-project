@@ -56,15 +56,16 @@ mysqli_query($dbconn, $log_sql);
 
 if ($login_success) {
 
-    echo "Użytkownik zalogowany!<br>";
-    echo "Witaj: " . $_SESSION["current_username"];
+    echo "<h1>Użytkownik zalogowany!</h1>";
+    echo "<h2>Witaj " . $_SESSION["current_username"] . "</h2>";
 
-    echo "<br><br>";
+    echo "<br>";
     echo "<a href='../index.php'>Przejdź do aplikacji</a>";
 
 } else {
 
-    echo "Błąd logowania!";
+    echo "<h1>Błąd logowania!</h1>";
+    echo "<a href='logowanie2026.php'>Spróbuj ponownie</a>";
 }
 
 mysqli_close($dbconn);
