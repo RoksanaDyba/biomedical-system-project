@@ -19,7 +19,7 @@ $zalogowany = isset($_SESSION["current_user"]);
 <?php if ($zalogowany) { ?>
 
     <p>
-        Jesteś zalogowana jako:
+        Jesteś zalogowany/a jako:
         <b><?php echo $_SESSION["current_username"]; ?></b>
     </p>
 
@@ -43,6 +43,13 @@ $zalogowany = isset($_SESSION["current_user"]);
                 <li><a href="dodaj_pomiar.php">Dodaj pomiar</a></li>
                 <li><a href="parametr_pomiary.php">Pomiary jednego parametru</a></li>
                 <li><a href="dodaj_parametr.php">Dodaj parametr biomedyczny</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-card">
+            <h2>Dokumentacja</h2>
+            <ul class="menu-list">
+                <li><a href="Dokumentacja_Dyba_Kamecka.pdf" target="_blank">Dokumentacja PDF</a></li>
             </ul>
         </div>
     </div>
