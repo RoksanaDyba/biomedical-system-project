@@ -14,7 +14,7 @@ session_destroy();
 </head>
 <body>
 
-<h2>Wylogowano!</h2>
+<h2>Wylogowano pomyślnie!</h2>
 
 <a href="logowanie2026.php">Zaloguj ponownie</a>
 

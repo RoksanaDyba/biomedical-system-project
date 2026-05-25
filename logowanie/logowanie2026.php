@@ -10,6 +10,8 @@
 
 <body>
 
+<h1>Logowanie do Systemu Danych Biomedycznych</h1>
+
 <form method="POST" action="login2026.php">
 <input type="email" name="email" placeholder="E-mail"><br>
 <input type="password" name="password" placeholder="Hasło"><br>
