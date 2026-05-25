@@ -40,6 +40,7 @@ if (mysqli_num_rows($query) > 0) {
 
         $_SESSION["current_user"] = $record["user_id"];
         $_SESSION["current_username"] = $record["user_fullname"];
+        $_SESSION["current_email"] = $record["user_email"];
 
         $login_success = true;
     }

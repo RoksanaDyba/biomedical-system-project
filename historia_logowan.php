@@ -19,9 +19,12 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+$email = mysqli_real_escape_string($conn, $_SESSION["current_email"]);
+
 $sql = "
 SELECT *
 FROM logowania
+WHERE email = '$email'
 ORDER BY data_proby DESC
 ";
 
