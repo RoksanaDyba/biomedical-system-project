@@ -22,6 +22,7 @@ if (!$dbconn) {
 $sql = "
 SELECT
     parametry.id,
+    parametry.user_id,
     parametry.nazwa,
     parametry.norma_min,
     parametry.norma_max,
@@ -82,15 +83,28 @@ while ($row = mysqli_fetch_assoc($query)) {
 
     echo "<td>" . ($row["user_fullname"] ? $row["user_fullname"] : "brak danych") . "</td>";
 
-    echo "
-    <td>
-        <a href='edytuj_parametr.php?id=".$row["id"]."'>Edytuj</a>
-        |
-        <a href='usun_parametr.php?id=".$row["id"]."'>Usuń</a>
-    </td>
-    ";
+    echo "<td>";
 
-    echo "</tr>";
+    if ($row["user_id"] == $_SESSION["current_user"]) {
+
+        echo "
+        <a href='edytuj_parametr.php?id=".$row["id"]."'>
+            Edytuj
+        </a>
+
+        |
+
+        <a href='usun_parametr.php?id=".$row["id"]."'>
+            Usuń
+        </a>
+        ";
+
+    } else {
+
+        echo "Brak uprawnień";
+    }
+
+    echo "</td>";
 }
 
 ?>

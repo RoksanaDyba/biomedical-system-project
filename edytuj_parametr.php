@@ -54,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         norma_min='$norma_min',
         norma_max='$norma_max'
     WHERE id='$id'
+    AND user_id='".$_SESSION["current_user"]."'
     ";
 
     if (mysqli_query($conn, $sql)) {
@@ -77,6 +78,14 @@ $sql = "SELECT * FROM parametry WHERE id='$id'";
 $result = mysqli_query($conn, $sql);
 
 $parametr = mysqli_fetch_assoc($result);
+
+if (!$parametr) {
+    die("Parametr nie istnieje.");
+}
+
+if ((int)$parametr["user_id"] !== (int)$_SESSION["current_user"]) {
+    die("Brak dostępu.");
+}
 
 ?>
 

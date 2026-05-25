@@ -50,7 +50,7 @@ $zalogowany = isset($_SESSION["current_user"]);
 <?php } else { ?>
 
     <p>
-        Nie jesteś zalogowana.
+        Nie jesteś zalogowany/a.
     </p>
 
     <div class="dashboard-container single-card">

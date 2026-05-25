@@ -27,7 +27,11 @@ if (isset($_GET["id"])) {
     $result = mysqli_query($conn, $check);
 
     if (mysqli_num_rows($result) == 0) {
-        $sql = "DELETE FROM parametry WHERE id='$id'";
+        $sql = "
+        DELETE FROM parametry
+        WHERE id='$id'
+        AND user_id='$user_id'
+        ";
         mysqli_query($conn, $sql);
     }
 }
